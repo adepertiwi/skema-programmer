@@ -1,0 +1,10 @@
+keterangan class bootstrap yang digunakan pada tag html
+
+class mt-5 artinya memberikan margin-top sebanyak 5 
+class table artinya memberikan style default table
+class d-flex artinya memberikan style display flex
+class justify-content-center artinya memberikan style justify-content dengan value center 
+class form-control artinya memberikan style pada sebuah input tag form
+class form-check-input artinya memberikan style pada tag radio button
+class btn artinya memberikan style pada tag button
+class btn-primary artinya memberikan style warna pada tag button 
