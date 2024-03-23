@@ -26,6 +26,7 @@ if ($update){
 	echo "<script>alert('Data Mahasiswa telah berhasil di-update.'); document.location='home.php'</script>";
 }
 else {
+	// Jika data gagal di-update, tampilkan pesan gagal dan redirect ke halaman user-view.php dengan parameter nim
 	echo "<script>alert('Data Mahasiswa gagal di-update. Silahkan ulangi kembali.'); document.location='user-view.php?nim=$nim'</script>";
 }
 

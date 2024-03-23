@@ -1,8 +1,8 @@
 <?php
-require "koneksi.php";
-require "Database.php";
+require "koneksi.php"; // Memasukkan file koneksi.php yang berisi pengaturan koneksi ke database.
+require "Database.php"; // Memasukkan file Database.php yang berisi definisi kelas Database.
 
-use App\Database;
+use App\Database; // Mengimpor kelas Database dari namespace App.
 
 // Sesuaikan dengan informasi koneksi database Anda
 $host = "localhost";
@@ -10,11 +10,13 @@ $username = "root";
 $password = "";
 $databaseName = "uas";
 
+// Membuat objek dari kelas Database dengan parameter koneksi yang telah ditentukan.
 $db = new Database($host, $username, $password, $databaseName);
 $conn = $db->connect();
 
+// Membuat query SQL untuk mengambil data mahasiswa dari tabel mahasiswa.
 $sql = "SELECT * FROM mahasiswa";
-$stmt = $conn->query($sql);
+$stmt = $conn->query($sql); // Menjalankan query SQL.
 
 ?>
 
@@ -38,10 +40,10 @@ $stmt = $conn->query($sql);
 
         <?php
 
-if ($stmt) {
+if ($stmt) { // Memeriksa apakah query berhasil dieksekusi.
     $num_rows = mysqli_num_rows($stmt);
 
-    if ($num_rows > 0) {
+    if ($num_rows > 0) { // Memeriksa apakah hasil query mengandung data.
         echo "<h1 class='text-center fw-bold mt-5 mb-5 '>DATA MAHASISWA</h1>";
 
         $counter = 1; //membuat nomor urut data
@@ -59,9 +61,9 @@ if ($stmt) {
                 <th>Action</th>
             </tr>";
 
-        while ($data = $stmt->fetch_assoc()) {
+        while ($data = $stmt->fetch_assoc()) { // Meloop melalui hasil query.
 
-            // membuat variable untuk mengubah value
+            // membuat variable untuk mengubah value jenis kelamin ke dalam teks yang sesuai.
             $jk = ["Perempuan", "Laki-Laki"];
 
             //memasukkan data ke tabel
@@ -76,16 +78,17 @@ if ($stmt) {
                     <a class='btn btn-danger' href=\"user-del.php?nim={$data['nim']}\">Hapus</a>
                 </td>
             </tr>";
-            $counter++; //increment
+            $counter++; // increment nomor urut.
         }
         echo "</table>";
 
     } else {
-        //jika result set < 0 (menampilkan pesan "data tidak tersedia")
+        // jika result set < 0 (menampilkan pesan "data tidak tersedia")
         echo "<h3>Data Tidak Tersedia!</h3>";
     }
 
 } else {
+    // Jika query tidak berhasil dieksekusi, tampilkan pesan "Query tidak berhasil dieksekusi!".
     echo "<h3>Query tidak berhasil dieksekusi!</h3>";
 }
 

@@ -1,5 +1,5 @@
 <?php
-require "koneksi.php"; //menghubungkan koneksi
+require "koneksi.php"; // Menghubungkan ke file koneksi.php untuk melakukan koneksi ke database.
 ?>
 
 <!doctype html>
