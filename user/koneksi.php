@@ -2,7 +2,7 @@
 $host="localhost"; //variabel host itu merupakan host dari databasenya dengan nama localhost
 $username="root"; //variabel username merupakan root dari database
 $password="";
-$database="uas"; //variabel database yang diberi nama uas 
+$database="user"; //variabel database yang diberi nama user
 
 //membuat koneksi
 $koneksi=mysqli_connect($host, $username, $password, $database);

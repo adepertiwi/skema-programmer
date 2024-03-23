@@ -14,7 +14,7 @@ $asal_file = $_FILES['foto']['tmp_name']; //digunakan untuk upload file ke serve
 
 //directory lokasi Foto pada server
 //$_SERVER['DOCUMENT_ROOT'] -> Foder HTDOCS -> localhost
-$tujuan_file = $_SERVER['DOCUMENT_ROOT'] . "/uas_210030534/user/images/".$_FILES['foto']['name']; //htdocs > uas_210030534 > user > images
+$tujuan_file = $_SERVER['DOCUMENT_ROOT'] . "/program/user/images/".$_FILES['foto']['name']; //htdocs > program > user > images
 
 
 //query untuk mengecek apakah nim sudah ada dalam tabel mahasiswa
