@@ -64,14 +64,15 @@ $data=mysqli_fetch_array($hasil);
 <div class="card mt-5" style="width: 30rem;">
 <h4 class='text-center fw-bold mt-5'>UBAH DATA DOSEN</h4>
 <table class="table table-borderless d-flex justify-content-center mt-5">
+<tr>
+        <td>Nama Dosen</td>
+        <td><input class="form-control" type="text" name="nama_dosen" class="txt" value="<?php echo $data['nama_dosen']; ?>"></td>
+    </tr>
     <tr>
         <td>Kode Dosen</td>
             <td><input class="form-control" type="text" name="kode_dosen" class="txt" value="<?php echo $data['kode_dosen']; ?>" readonly></td>
     </tr>
-    <tr>
-        <td>Nama Dosen</td>
-        <td><input class="form-control" type="text" name="nama_dosen" class="txt" value="<?php echo $data['nama_dosen']; ?>"></td>
-    </tr>
+    
     <tr>
         <td>Jabatan Fungsional</td>
         <td>
